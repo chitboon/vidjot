@@ -15,7 +15,7 @@ const mainRoute = require('./routes/main');
 const userRoute = require('./routes/user');
 const videoRoute = require('./routes/video');
 
-const {formatDate} = require('./helpers/hbs'); 
+const {formatDate, radioCheck} = require('./helpers/hbs');
 
 // load database libraries
 const vidjotDB = require('./config/DBConnection');
@@ -41,7 +41,8 @@ authenticate.localStrategy(passport);
 // Handlebars Middleware
 app.engine('handlebars', exphbs({
 	helpers: {
-		formatDate: formatDate
+		formatDate: formatDate,
+		radioCheck: radioCheck
 	},
 	defaultLayout: 'main',						// Specify default template views/layout/main.handlebar 
 	handlebars: allowInsecurePrototypeAccess(Handlebars)
