@@ -26,22 +26,24 @@
 						<br>
 						<div class="form-check form-check-inline">
 							<input class="form-check-input" type="checkbox" name="language" id="chineseLang" value="Chinese"
-								{{video.chineseLang}} >
+								{{video.chineseLang}} onclick="ensureOneCheck('language', 'languageErr',
+								'butEditVideo')">
 							<label class="form-check-label" for="chinese">Chinese</label>
 						</div>
 						<div class="form-check form-check-inline">
 							<input class="form-check-input" type="checkbox" name="language" id="englishLang" value="English"
-								   {{video.englishLang}}>
+								   {{video.englishLang}} onclick="ensureOneCheck('language', 'languageErr',
+								   'butEditVideo')" >
 							<label class="form-check-label" for="englishLang">English</label>
 						</div>
 						<div class="form-check form-check-inline">
 							<input class="form-check-input" type="checkbox" name="language" id="malayLang" value="Malay"
-								   {{video.malayLang}} >
+								   {{video.malayLang}} onclick="ensureOneCheck('language', 'languageErr', 'butEditVideo')">
 							<label class="form-check-label" for="malaylang">Malay</label>
 						</div>
 						<div class="form-check form-check-inline">
 							<input class="form-check-input" type="checkbox" name="language" id="tamilLang" value="Tamil"
-								{{video.tamilLang}}>
+								{{video.tamilLang}} onclick="ensureOneCheck('language', 'languageErr', 'butEditVideo')">
 							<label class="form-check-label" for="tamilLang">Tamil</label>
 						</div>
 						<p class="font-weight-bold text-info" id="languageErr" style="display:none">Please select one
